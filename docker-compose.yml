@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  api:
+    build: .
+    image: rdai_fastapi
+    ports:
+      - "8000:8000"
+    container_name: rdai_img
+    volumes:
+    - .:/RDAI_Project
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

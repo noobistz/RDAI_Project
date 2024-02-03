@@ -1,0 +1,13 @@
+name: rdai
+channels:
+  - defaults
+  - anaconda
+  - conda-forge
+dependencies:
+  - python==3.10
+  - pip:
+    - autoawq
+    - transformers==4.36.0
+    - vllm
+    - fastapi 
+    - uvicorn
